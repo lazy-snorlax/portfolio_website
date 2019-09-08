@@ -28,6 +28,7 @@
   &:hover::after{
     transform: scale(2) translateX(0) translateY(0) rotate(-28deg);
     transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1);
+    // background: $main-color;
   }
 
   // Scale image on hover
@@ -62,6 +63,8 @@
     width: 100%;
     height: auto;
     line-height: 0;
+    padding-top: 0.5rem;
+    transform: scale(1.6);
   }
 
   &-text{
@@ -106,17 +109,18 @@
     justify-content: center;
     align-items: center;
 
+    & a{
+      color: #000;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: bold;      
+    }
+
     & i{
       border: #000 3px solid;
       border-radius: 50%;
-      padding: 0.5rem;   
-    }
-
-    & a{
-      color: #000;
-      padding: 1rem;
-      font-size: 1.2rem;
-      font-weight: bold;
+      padding: 0.2rem;  
+      margin: 0.5rem; 
     }
 
     &:hover{
