@@ -425,17 +425,24 @@ footer {
     height: 30rem; }
     #header-home .header-content {
       padding-top: 5rem; }
-  #home-languages .specials {
+  #home-languages .specials,
+  #home-b .stats {
     grid-template-columns: repeat(3, 1fr); }
-  #home-b .stats,
   #home-c .process,
-  #contact-b .contact-info,
   .items {
+    grid-template-columns: repeat(2, 1fr); }
+  #home-c .process:last-child {
+    grid-column-start: 1 / span 2; }
+  #contact-b .contact-info {
     grid-template-columns: 1fr; }
   .items .item {
     border: #555 1px solid; }
+    .items .item-text-title {
+      font-size: 1.5rem; }
+    .items .item-text-category {
+      font-size: 1rem; }
   #about-a .about-info {
-    grid-template-areas: 'bioimg' 'bio' 'qualif1' 'qualif2' 'qualif3'; } }
+    grid-template-areas: 'bioimg' 'bio' 'qualif1 qualif2 qualif3'; } }
 
 @media (max-width: 500px) {
   #main-nav {
@@ -489,8 +496,17 @@ footer {
   #header-home .header-content {
     padding-top: 3rem; }
   #home-languages .specials,
-  #home-b .stats,
+  #home-b .stats {
+    grid-template-columns: repeat(3, 1fr); }
   #home-c .process,
   #contact-b .contact-info,
   .items {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  #contact-b div {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border: 1px #555 solid; }
+    #contact-b div:last-child {
+      border: none;
+      padding-bottom: 0;
+      margin-bottom: 0; } }
