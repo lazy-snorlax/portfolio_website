@@ -415,6 +415,11 @@ footer {
       #main-footer .footer-content .social .fab:hover {
         background: #ffbb00; }
 
+@media (max-width: 1000px) {
+  #home-c .process,
+  .items {
+    grid-template-columns: repeat(2, 1fr); } }
+
 @media (max-width: 800px) {
   #header-home {
     height: 30rem; }
@@ -428,7 +433,9 @@ footer {
   .items {
     grid-template-columns: 1fr; }
   .items .item {
-    border: #555 1px solid; } }
+    border: #555 1px solid; }
+  #about-a .about-info {
+    grid-template-areas: 'bioimg' 'bio' 'qualif1' 'qualif2' 'qualif3'; } }
 
 @media (max-width: 500px) {
   #main-nav {
