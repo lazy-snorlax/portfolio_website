@@ -419,7 +419,16 @@ footer {
   #header-home {
     height: 30rem; }
     #header-home .header-content {
-      padding-top: 5rem; } }
+      padding-top: 5rem; }
+  #home-languages .specials {
+    grid-template-columns: repeat(3, 1fr); }
+  #home-b .stats,
+  #home-c .process,
+  #contact-b .contact-info,
+  .items {
+    grid-template-columns: 1fr; }
+  .items .item {
+    border: #555 1px solid; } }
 
 @media (max-width: 500px) {
   #main-nav {

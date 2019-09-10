@@ -7,6 +7,21 @@
       padding-top: 5rem;
     }
   }
+
+  #home-languages .specials{
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  #home-b .stats,
+  #home-c .process,
+  #contact-b .contact-info,
+  .items {
+    grid-template-columns: 1fr;
+  }
+
+  .items .item{
+    border: #555 1px solid;
+  }
 }
 
 // Smartphones
