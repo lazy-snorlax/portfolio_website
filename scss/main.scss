@@ -2,20 +2,19 @@
 @import 'utilities';
 @import 'item_grid';
 
-
 // General Styles
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   font-family: 'Dosis', sans-serif;
   line-height: 1.6;
   background: #fff;
 }
 
-a{
+a {
   text-decoration: none;
 }
 
@@ -23,20 +22,22 @@ ul {
   list-style: none;
 }
 
-h2, h3, h4{
+h2,
+h3,
+h4 {
   text-transform: uppercase;
 }
 
-img{
+img {
   width: 100%;
 }
 
-footer{
+footer {
   background: $dark-color;
 }
 
 // Logo
-#logo{
+#logo {
   width: 70px;
   height: 70px;
   color: #fff;
@@ -45,22 +46,23 @@ footer{
 }
 
 // CSharp icon
-.devicon-csharp-plain{
+.devicon-csharp-plain {
   font-size: 4rem;
   color: $main-color;
 }
 
 // Main Nav
-#main-nav{
+#main-nav {
   display: flex;
   justify-content: space-between;
   padding-top: 1rem;
+  background: none;
 
-  ul{
+  ul {
     display: flex;
   }
 
-  li{
+  li {
     padding: 1rem 1.5rem;
   }
 
@@ -72,7 +74,7 @@ footer{
     padding-bottom: 0.5rem;
     transition: border-color 0.5s;
 
-    &:hover{
+    &:hover {
       border-color: $medium-color;
     }
 
@@ -83,28 +85,37 @@ footer{
 }
 
 // Header
-#header{
+#header {
   // Header Home
-  &-home{
-    background: $bg-img no-repeat center right / cover;
+  &-home {
+    background-color: none;
     height: 100vh;
     color: #fff;
+    z-index: 0;
+
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1 !important;
+    }
 
     // Header Content
-    .header-content{
+    .header-content {
+      background: none;
       text-align: center;
       padding-top: 20%;
     }
 
-    h1{
+    h1 {
       font-size: 4rem;
       line-height: 1.5;
     }
   }
 
   // Header Inner
-  &-inner{
-    background: $bg-img no-repeat 20% 30% / cover;
+  &-inner {
+    background: $dark-color;
     height: 5.5rem;
     border-bottom: 3px solid $main-color;
   }
@@ -114,28 +125,31 @@ footer{
 #home {
   // Languages
   &-languages {
-    .specials{
+    background: $light-color;
+    .specials {
       margin-top: 3rem;
       display: grid;
       gap: 1rem;
       grid-template-columns: repeat(4, 1fr);
 
-      .fab, .fas{
+      .fab,
+      .fas {
         color: $main-color;
         padding-bottom: 0.4rem;
       }
     }
   }
 
-  &-b{
-    .stats{
+  &-b {
+    background: $light-color;
+    .stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
 
-      li{
+      li {
         line-height: 2;
 
-        &.stats-title{
+        &.stats-title {
           font-size: 1.5rem;
         }
 
@@ -145,27 +159,28 @@ footer{
         }
       }
 
-      div{
+      div {
         padding: 3rem;
 
-        &:nth-child(odd){
+        &:nth-child(odd) {
           background-color: $light-color;
         }
-        &:nth-child(even){
+        &:nth-child(even) {
           background-color: $medium-color;
         }
       }
     }
   }
 
-  &-c{
-    .process{
+  &-c {
+    background-color: $light-color;
+    .process {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 1.5rem;
       text-align: center;
 
-      &-step{
+      &-step {
         position: absolute;
         top: 0;
         right: 0;
@@ -180,7 +195,7 @@ footer{
         transition: all 1s;
       }
 
-      &-icon{
+      &-icon {
         border-radius: 50%;
         background: $dark-color;
         color: set-text-color($dark-color);
@@ -192,13 +207,13 @@ footer{
         position: relative;
         transition: all 1s;
 
-        &:hover{
+        &:hover {
           background: $main-color;
           width: 90px;
           height: 90px;
           line-height: 90px;
 
-          .process-step{
+          .process-step {
             background: $dark-color;
             color: set-text-color($dark-color);
           }
@@ -209,11 +224,11 @@ footer{
 }
 
 // About Sections
-#about{
-  &-a{
-    .about-info{
+#about {
+  &-a {
+    .about-info {
       display: grid;
-      grid-template-areas: 
+      grid-template-areas:
         'bioimg bio bio'
         'qualif1 qualif2 qualif3';
       gap: 1.2rem;
@@ -224,41 +239,41 @@ footer{
       grid-area: bioimg;
     }
 
-    .bio{
+    .bio {
       grid-area: bio;
       border-left: 3px solid $main-color;
       padding: 0.8rem;
     }
 
-    .qualif{
-      &-1{
+    .qualif {
+      &-1 {
         grid-area: qualif1;
       }
-      &-2{
+      &-2 {
         grid-area: qualif2;
       }
-      &-3{
+      &-3 {
         grid-area: qualif3;
       }
     }
 
     .qualif-1 .fas,
     .qualif-2 .fas,
-    .qualif-3 .fas{
+    .qualif-3 .fas {
       color: $main-color;
       margin: 1rem;
     }
   }
 
-  &-b{
-    .progress{
+  &-b {
+    .progress {
       overflow: hidden;
       height: 20px;
       background: $medium-color;
       border-radius: 5px;
       margin-bottom: 1rem;
 
-      div{
+      div {
         height: 100%;
         color: set-text-color($main-color);
         text-align: center;
@@ -269,11 +284,11 @@ footer{
 }
 
 // Contact Page
-#contact{
-  &-a{
-    .text-fields{
+#contact {
+  &-a {
+    .text-fields {
       display: grid;
-      grid-template-areas: 
+      grid-template-areas:
         'name email'
         'subject subject'
         'message message';
@@ -281,48 +296,47 @@ footer{
       margin-bottom: 1.2rem;
 
       // Grid Areas
-      .name-input{
+      .name-input {
         grid-area: name;
       }
 
-      .email-input{
+      .email-input {
         grid-area: email;
       }
 
-      .subject-input{
+      .subject-input {
         grid-area: subject;
       }
-      
-      .message-input{
+
+      .message-input {
         grid-area: message;
         height: 100px;
       }
 
-      .text-input{
+      .text-input {
         padding: 0.5rem 1rem;
       }
     }
 
-    button[type='submit']{
+    button[type='submit'] {
       width: 50%;
     }
   }
 
-  &-b{
-    .contact-info{
+  &-b {
+    .contact-info {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       text-align: center;
     }
   }
 
-  &-c{
-    h1{
+  &-c {
+    h1 {
       text-align: center;
       font-size: 2.5rem;
     }
   }
-
 }
 
 // Footer
@@ -348,7 +362,7 @@ footer{
       padding: 0.5rem;
       color: #fff;
 
-      &:hover{
+      &:hover {
         background: $main-color;
       }
     }
