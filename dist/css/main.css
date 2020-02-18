@@ -343,7 +343,7 @@ footer {
 
 #about-a .about-info {
   display: grid;
-  grid-template-areas: 'bioimg bio bio' 'qualif1 qualif2 qualif3';
+  grid-template-areas: 'bioimg bio bio' 'qualif2 qualif-1 qualif-3';
   gap: 1.2rem; }
 
 #about-a .bio-img {
@@ -354,14 +354,13 @@ footer {
   border-left: 3px solid #ffbb00;
   padding: 0.8rem; }
 
-#about-a .qualif-1 {
-  grid-area: qualif1; }
-
-#about-a .qualif-2 {
-  grid-area: qualif2; }
-
-#about-a .qualif-3 {
-  grid-area: qualif3; }
+#about-a .qualif {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  #about-a .qualif-2 {
+    grid-area: qualif2;
+    width: 25rem; }
 
 #about-a .qualif-1 .fas,
 #about-a .qualif-2 .fas,

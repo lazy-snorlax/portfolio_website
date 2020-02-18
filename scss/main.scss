@@ -230,7 +230,7 @@ footer {
       display: grid;
       grid-template-areas:
         'bioimg bio bio'
-        'qualif1 qualif2 qualif3';
+        'qualif2 qualif-1 qualif-3';
       gap: 1.2rem;
     }
 
@@ -246,15 +246,19 @@ footer {
     }
 
     .qualif {
-      &-1 {
-        grid-area: qualif1;
-      }
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // &-1 {
+      //   display: block;
+      // }
       &-2 {
         grid-area: qualif2;
+        width: 25rem;
       }
-      &-3 {
-        grid-area: qualif3;
-      }
+      // &-3 {
+      //   grid-area: qualif3;
+      // }
     }
 
     .qualif-1 .fas,
